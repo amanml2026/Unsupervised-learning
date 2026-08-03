@@ -15,7 +15,7 @@ class KMeans_Clustering:
             # assign clusters
             cluster_group = self._assign_clusters(X)
             # updating the centroids
-            old_centroids = self.centroids
+            old_centroids = self.centroids.copy()
             new_centroids = self._new_centroids(X,cluster_group)
             # finish
             if (old_centroids == new_centroids).all():
