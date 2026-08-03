@@ -20,6 +20,9 @@ class KMeans_Clustering:
             # finish
             if (old_centroids == new_centroids).all():
                 break
+            self.centroids = new_centroids
+
+        return cluster_group
 
     def _assign_clusters(self,X):
         distances = []
